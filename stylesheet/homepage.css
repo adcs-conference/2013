@@ -1,0 +1,419 @@
+/* QUT template - "homepage" stylesheet */
+/* Should be used in conjunction with common and corpstyle stylesheets */
+/* Copyright QUT 2009 */
+/* Version 4.0 */
+
+
+/* HOMEPAGE-SPECIFIC LAYOUT SETTINGS ------------------------- HOMEPAGE-SPECIFIC LAYOUT SETTINGS */
+
+h2 {
+  padding-top:0;
+  line-height: 1em;
+}
+
+h3, h4, h5, h6 {
+  padding-top:0;
+}
+
+#content {
+	width: 1100px;
+}
+
+#col-wrapper	{
+	padding-top:0;
+	margin-top:0;
+	width:auto;
+}
+
+#home {
+    color: #fff;
+    background-color: #0E487F;
+    text-decoration: none;
+}
+
+.page_title {
+  margin-left: 20px;
+}
+
+.sidenav {
+  display: none;
+}
+
+.content{
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.1em;
+
+}
+
+.right_margin {
+	display:none;
+}
+
+#middle-col	{
+	width:auto;
+}
+
+/******* home page-specific overrides *******/
+
+div#col-wrapper {
+	background-image: url(/images/col-wrapper-bg.png);
+    background-position: left 405px;
+    background-repeat: repeat-x;
+
+}
+
+h1 {
+    position: absolute;
+    left: -99999px;
+}
+
+#content h2 {
+    color: #000;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#content a {
+    text-decoration: none;
+}
+
+#content a:hover {
+    text-decoration: underline;
+}
+
+#content img {
+    padding: 0;
+}
+
+#content ul > li {
+    background-image: none;
+    margin-bottom: auto;
+    padding-left: auto;
+    zoom: auto;
+}
+
+/************* promo area ***************/
+
+#promo-area {
+    height: 377px;
+}
+
+.quick-links {
+    font-family: arial, sans-serif;
+    left: 20px;
+    position: absolute;
+    top: 43px;
+    width: 213px;
+    z-index: 3;
+}
+
+.quick-links li a {
+    background: url(/images/quicklinks-bg.png) repeat-x center center;
+    color: #fff;
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 49px;
+    padding: 0 10px 0 20px;
+    text-decoration: none;
+    width: auto;
+}
+
+#promo-area .quick-links li a:hover{
+    background: #559a01;
+    text-decoration: none;
+}
+
+.promo-banner {
+	background-image: url(/images/words.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+	height: 404px;
+    left: 0px;
+    position: absolute;
+    top: 23px;
+    width: 1100px;
+    z-index: 1;
+}
+
+.promo-banner .promo-overlay {
+    background: url(/images/banner-overlay3.png) left top no-repeat;
+    width: 510px;
+    height: 334px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.promo-content {
+    left: 40px;
+    line-height: 1.4em;
+    position: absolute;
+    top: 38px;
+}
+
+#content div.promo-pre-heading {
+    background-color: #7f8083;
+    color: #fff;
+    font-family: arial, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1em;
+    padding: 5px 10px;
+    left: 250px;
+    position: absolute;
+    top: 150px;
+}
+
+#content div.promo-pre-heading p {
+    line-height: 1em;
+	padding: 0;
+}
+
+.promo-heading {
+    background-color: #01B3A5;
+    color: #fff;
+    font-family: arial, sans-serif;
+    font-size: 2.8em;
+    font-weight: bold;
+    left: 40px;
+    line-height: 0.95em;
+    min-width: 220px;
+    overflow: hidden;
+    padding: 0 5px 20px 0;
+    position: absolute;
+	top: 110px;
+    z-index: 2;
+}
+
+.promo-heading_a {
+    background-color: #01B3A5;
+    color: #fff;
+    font-family: arial, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    left: 40px;
+    line-height: 0.95em;
+    min-width: 220px;
+    overflow: hidden;
+    padding: 27px 150px 23px 27px;
+    position: absolute;
+	top: 100px;
+    z-index: 2;
+	
+}
+
+.promo-heading_b {
+    font-size: 0.7em;
+    font-weight: bold;
+    left: 40px;
+    line-height: 0.95em;
+	
+}
+
+.promo-heading_c {
+	font-size: 0.8em;
+    font-weight: normal;
+    left: 40px;
+    line-height: 0.95em;
+	padding: 15px 0px 2px 0px;
+	}
+
+.promo-heading p {
+    display: block;
+    line-height: 1em;	
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.promo-heading p#bg_trans {
+    background-color: #559a01;
+    filter: alpha(opacity=90);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+    height: 261px;
+    left: 0;
+    -moz-opacity: 0.9;
+    opacity:0.9;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.promo-heading.hover {
+    background-color: #559a01;
+}
+
+.promo-link {
+    *background: white;          /* stupid IE! */
+    background: red\9;         /* stupid IE! */
+    *filter:alpha(opacity=0);    /* stupid IE! */
+    filter:alpha(opacity=0)\9;   /* stupid IE! */
+    height: 334px;
+    left: 250px;
+    outline: none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0;
+    width: 540px;
+    z-index: 10;
+}
+
+
+
+/************* search and quick links ***************/
+
+#links {
+    background: url(/images/home-sprite.png) #fff no-repeat -409px 0;
+    height: 174px;
+    margin: 0 auto 20px auto;
+	padding: 20px 0 0 0;
+    position: relative;
+    width: 1060px;
+    z-index: 10;
+}
+
+#links h2 {
+    font-size: 1.3em;
+	line-height: 1.1em;
+    margin-bottom: 10px;
+	padding: 0;
+}
+
+#links .col {
+    border-right: 1px dotted #C7C7C7;
+    float: left;
+    height: 163px;
+    padding: 0 30px;
+}
+
+#links .col-1 {
+    margin-left: 90px;
+    width: 238px;
+}
+
+#links .col-2 {
+    width: 258px;
+}
+
+#links .col-3 {
+    width: 288px;
+	border: none;
+}
+
+#links .col-4 {
+    width: 188px;
+	border: none;
+}
+
+#links .col ul {
+    margin: 0;
+}
+
+#links .col li {
+    margin-bottom: 10px;
+}
+
+
+
+/************* content columns ***************/
+
+#content-cols {
+    margin: 0 auto;
+    width: 1060px;
+}
+
+#content-cols h2 {
+    border-bottom: 1px dotted #00467f;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+	margin-top:0;
+}
+
+/* Two columns */
+
+#content-cols .two-left-col{
+    width: 520px;
+    float: left;
+	margin-right: 20px;
+}
+
+#content-cols .two-right-col{
+    width: 520px;
+    float: left;
+}
+
+/* Three columns */
+
+#content-cols .three-left-col {
+    float: left;
+    margin-right: 20px;
+    width: 340px;
+}
+#content-cols .three-mid-col{
+	width: 340px;
+	margin-right: 20px;
+	float: left;
+}
+
+#content-cols .three-right-col {
+    float: left;
+    width: 360px;
+}
+
+/* Four columns */
+
+#content-cols .four-left-col {
+    float: left;
+    margin-right: 20px;
+    width: 250px;
+}
+#content-cols .four-mid-col{
+	width: 250px;
+	margin-right: 20px;
+	float: left;
+}
+
+#content-cols .four-right-col {
+    float: left;
+    width: 250px;
+}
+
+#content-cols .col {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 16px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Action Links */
+.action_link {
+    background: url(/images/home-sprite.png) #fff no-repeat -490px -287px;
+    height: 20px;
+    margin: 0 0 0 0;
+	padding: 0 0 0 0;
+    position: absolute;
+	top: 165px;
+    width: 258px;
+    z-index: 12;
+}
+.act_links_text {
+    margin-left: 20px;
+    width: 258px;
+	position: relative;
+	bottom: 4px;
+	font-weight: bold;
+}
+
+.dark_blue_font {
+    color: #1F4F95;
+}
+
+.word_spacing {
+	letter-spacing:3px;
+
+}

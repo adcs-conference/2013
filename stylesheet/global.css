@@ -1,0 +1,874 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100.01%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+
+
+/******* generic elements *******/
+
+body {
+    font-size: 0.8em;
+    line-height: 1em;
+    background: url(../images/header-bg.png) repeat-x top center #fff;
+    font-family: arial, helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #191919;
+}
+
+a {
+    color: #094f95;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, 
+blockquote:after, 
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+em {
+    font-style: italic;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+sup {
+    font-size: 10px;
+    left: 0;
+    position: relative;
+    top: -0.5em;
+}
+
+
+
+/******* generic classes *******/
+
+.ajax-loader {
+    background: url(../images/ajax-loader.gif) no-repeat left center;
+    display: none;
+    font-style: italic;
+    font-weight: normal !important;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 34px;
+}
+
+.loader-text{
+   display:block;
+   margin-left: 40px;
+   margin-top: 5px;
+}
+
+.cell-border-top {
+    border-top: 1px dotted #999 !important;
+}
+
+img.centre {
+    display: block;
+    margin: 0 auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.border-bottom {
+    border-bottom: 1px dotted #ccc;
+}
+
+.clear-both {
+    clear: both !important;
+}
+
+.clear-left {
+    clear: left !important;
+}
+
+.clear-right {
+    clear: right !important;
+}
+
+.float-left {
+    float: left !important;
+}
+
+img.float-left {
+    margin-right: 1em !important;
+}
+
+.float-none {
+    float: none !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
+img.float-right {
+    margin-left: 1em !important;
+}
+
+.hide {
+    position: absolute;
+    left: -99999px;
+}
+
+.image-border {
+    border: 1px solid #ccc !important;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.no-list-bullets li {
+    background: none !important;
+    list-style: none !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.display-block {
+    display: block !important;
+}
+
+.display-inline {
+    display: inline !important;
+}
+
+.display-inline-block {
+    display: inline-block !important;
+}
+
+.display-none {
+    display: none !important;
+}
+
+/******* header *******/
+
+#header-wrapper {
+    background-image: url(../images/logo-header-bg.jpg);
+    background-position: -500px 0;
+    background-repeat: no-repeat;
+    margin: 0;
+    z-index: 100;
+}
+
+#header {
+    height: 122px;
+    margin: 0 auto;
+    position: relative;
+    width: 1056px;
+    z-index: 100;
+}
+
+#logo {
+    background: url(../images/logo.png) no-repeat 0 0;
+	color: #fff;
+    display: block;
+	font-weight: bold;
+	height: 54px;
+    left: 0;
+	line-height: 28px;	
+    outline: none;
+    position: absolute;
+	text-decoration: none;
+    top: 20px;
+    width: 500px;
+}
+
+#logo span {
+	display: inline-block;
+	font-size: 1em;
+	line-height: 24px;
+	padding: 0 0 0 94px;
+}
+
+#top-links {
+    position: absolute;
+    right: 378px;
+    text-align: right;
+    top: 25px;
+}
+
+#top-links li {
+    float: left;
+    margin-right: 10px;
+}
+
+#top-links a {
+    border-right: 1px dotted #fff;
+    color: #fff;
+    font-size: 0.95em;
+    font-weight: bold;
+    line-height: 2em;
+    padding-right: 10px !important;
+}
+
+#top-links a:hover {
+    text-decoration: underline;
+}
+
+#global-search-form {
+    background: url(../images/global-sprite.png) 0 -54px no-repeat;
+    height: 36px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 380px;
+}
+
+#global-search-form .search-input {
+    background: none;
+    border: none;
+    color: #888;
+    float: left;
+    font-size: 1em;
+    font-weight: bold;
+    height: 22px;
+    line-height: 22px;
+    margin: 6px 3px;
+    padding: 0;
+    /* padding-left: 4px; */
+    width: 333px;
+}
+
+#global-search-form .search-submit {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0;
+    height: 36px;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    text-indent: -9999px;
+    width: 40px;
+}
+
+#blue-bar {
+    background-image: url(../images/dateline.png);
+    background-position: top left;
+    background-repeat: repeat-x;
+    height: 30px;
+    left: -830px;
+    position: absolute;
+    top: 92px;
+    width: 100%;
+}
+
+#current-date {
+    background-image: url(../images/date-sem-week-bg.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 92px;
+    width: 253px;
+}
+
+span#top-date, span#teaching-period {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#portal-links {
+    position: absolute;
+    right: 0;
+    top: 85px;
+}
+
+#portal-links li {
+    float: left;
+    margin-left: 20px;
+}
+
+#portal-links a#corpsite {
+    background: url(../images/global-sprite.png) no-repeat scroll 0 -135px transparent;
+    color: #fff;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    height: 27px;
+    line-height: 27px;
+    padding: 0 0 0 34px;
+    width: 102px;
+}
+
+#portal-links a#corpsite:hover {
+    background: url(../images/global-sprite.png) no-repeat scroll 0 -162px transparent;
+    text-decoration: none;
+}
+
+#portal-links a#staff {
+    background: url(../images/global-sprite.png) no-repeat scroll -136px -135px transparent;
+    color: #fff;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    height: 27px;
+    line-height: 27px;
+    padding: 0 0 0 34px;
+    width: 92px;
+}
+
+#portal-links a#staff:hover {
+    background: url(../images/global-sprite.png) no-repeat scroll -136px -162px transparent;
+    text-decoration: none;
+}
+
+#portal-links a#students {
+    background: url(../images/global-sprite.png) no-repeat scroll -262px -135px transparent;
+    color: #fff;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    height: 27px;
+    line-height: 27px;
+    padding: 0 0 0 34px;
+    width: 126px;
+}
+
+#portal-links a#students:hover {
+    background: url(../images/global-sprite.png) no-repeat scroll -262px -162px transparent;
+    text-decoration: none;
+}
+
+
+
+/******* content *******/
+
+#content {
+    color: #333;
+    line-height: 1.4em;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative
+}
+
+
+
+/******* menu *******/
+
+#menu-wrapper {
+    background-image: url(../images/menu-bg.png);
+    background-repeat: repeat-x;
+    border-top: 1px solid #6088ab;
+    height: 42px;
+    margin: 0;
+    z-index: 100;
+}
+
+#menu {
+    border-bottom: 8px solid #0e477f;
+    height: 42px;
+    left: 0;
+    margin: 0 auto;
+    position: relative;
+    top: -5px;
+    width: 1060px;
+    z-index: 1000;
+}
+
+#menu li.menu {
+    float: left;
+    left: 0;
+    position: relative;
+    top: 5px;
+}
+
+#menu li.menu a.menu-link {
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    float: left;
+    height: 33px;
+    margin-top: 4px;
+    text-align: center;
+}
+
+#menu li.menu a.menu-link span {
+    border-right: 1px dotted #fff;
+    display: block;
+    line-height: 18px;
+    padding: 0 25px;
+    position: relative;
+    top: 6px;
+}
+
+#menu li.menu a.current span, #menu li.menu a.adjacent span, #menu li.menu a.current-adjacent span {
+    border-color: transparent !important;
+}
+
+#menu li.menu a.menu-link span.last {
+    border-right: none;
+}
+
+#menu li.menu a.current, #menu li.menu a.menu-link:hover, #menu li:hover a.menu-link {
+    color: #fff;
+    background-color: #225e92;
+    text-decoration: none;
+}
+
+#menu li:hover {
+    z-index: 1001;
+}
+
+#menu li.menu a.current, #menu li.menu a.current:hover {
+    background-color: #0e487f !important;
+}
+
+#menu .drop-down-wrapper {
+    background: url(../images/menu-right-bg.png) repeat-y right center;
+    left: -9999px;
+    padding: 0 5px 0 0;
+    position: absolute;
+    top: 37px;
+    width: auto;
+}
+
+#menu li:hover .drop-down-wrapper {
+    left: 0;
+}
+
+#menu .drop-down-wrapper .bottom-shadow {
+    background: url(../images/menu-bottom-bg.png) repeat-x center center;
+    border-top: 4px solid #034881;
+    display: block;
+    height: 5px;
+    margin-bottom: -5px;
+    width: auto;
+}
+
+#menu .drop-down-wrapper .bottom-right-shadow {
+    background: url(../images/global-sprite.png) no-repeat -447px -1px;
+    bottom: -5px;
+    display: block;
+    height: 5px;
+    position: absolute;
+    right: 0;
+    width: 5px;
+}
+
+#menu .drop-down {
+    background-color: #fff;
+    border: 4px solid #034881;
+    border-bottom: none;
+    height: 1%;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+}
+
+#menu .drop-down .col {
+    float: left;
+    font-size: 0.9em;
+    line-height: 1.3em;
+}
+
+#menu .drop-down .col p {
+    margin-bottom: 12px;
+}
+
+#menu .drop-down .heading {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#menu .drop-down .col-1 {
+    margin-right: 20px;
+    width: 200px;
+}
+
+#menu .drop-down .col-1 li {
+    background: url(../images/global-sprite.png) -489px -315px no-repeat;
+    border-bottom: 1px dotted #6d6e71;
+    margin-bottom: 12px;
+    padding-left: 20px;
+}
+
+#menu .drop-down .col-1 li a {
+    display: inline-block;
+    font-size: 1.1em;
+    margin-bottom: 4px;
+}
+
+#menu .drop-down .col-2 {
+    margin-right: 14px;
+    width: 165px;
+}
+
+#menu .drop-down .col-2 li {
+    border-bottom: 1px dotted #6d6e71;
+    padding: 10px 10px 1px;
+    background: #eaeaea;
+}
+
+#menu .drop-down .col-2 li a{
+    display: inline-block;
+    font-size: 1.1em;
+    margin-bottom: 4px;
+}
+
+#menu .drop-down .col-3 {
+    border-left: 1px solid #eaeaea;
+    padding-left: 14px;
+    width: 165px;
+}
+
+#menu .drop-down .col-3 .contact-heading {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#menu .drop-down .col hr {
+    border: none;
+    border-top: 1px dotted #6d6e71;
+    clear: both;
+    display: block;
+    height: 1px;
+    line-height: 0;
+    margin: 12px 0 12px;
+}
+
+
+
+/******* footer *******/
+
+#footer {
+    background: url(/images/footer-bg.png) repeat-x scroll center top #0a62aa;
+    color: #fff;
+    float: left;
+    line-height: normal;
+    margin: 0 auto;
+    min-width: 1100px;	
+    width: 100%;
+}
+
+#footer a {
+    color: #fff;
+}
+
+#footer-content {
+    height: 97px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 1060px;
+}
+
+#footer-content h3 {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#where-have-i-been {
+    height: 39px;
+    margin-bottom: 37px;
+    overflow: hidden;
+}
+
+#footer-content .col {
+    float: left;
+    margin-right: 20px;
+}
+
+#footer-content .col ul {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    min-height: 100px;
+    padding: 0;
+}
+
+#footer-content .col li {
+    line-height: 1.3em;
+    margin-bottom: 8px;
+}
+
+#footer-content .col li a {
+    color: #bfe0fb;
+}
+
+#footer-content .col li h3 a {
+    color: #fff;
+    font-size: 1em;
+}
+
+#footer-content #footer-page-menu {
+    float: left;
+    margin-top: 30px;
+}
+
+#footer-content #footer-page-menu li {
+    float: left;
+    height: 40px;
+    margin-bottom: 0;
+    margin-right: 30px;
+}
+
+#footer-content #footer-page-menu li a {
+    display: block;
+    float: left;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 32px;
+}
+
+#footer-content #footer-social-media-links {
+    float: right;
+    margin-top: 30px;
+}
+
+#footer-content #footer-social-media-links li {
+    float: left;
+    height: 40px;
+    margin-bottom: 0;
+    margin-right: 11px;
+    width: 30px;
+}
+
+#footer-content #footer-social-media-links li a {
+    display: block;
+    float: left;
+    height: 32px;
+    width: 32px;
+}
+
+#facebook-footer-icon {
+    background: url(../images/global-sprite.png) no-repeat 0 -288px;
+}
+
+#twitter-footer-icon {
+    background: url(../images/global-sprite.png) no-repeat -41px -288px;
+}
+
+#youtube-footer-icon {
+    background: url(../images/global-sprite.png) no-repeat -82px -288px;
+}
+
+#email-footer-icon {
+    background: url(../images/global-sprite.png) no-repeat -164px -288px;
+}
+
+#linkedin-footer-icon {
+    background: url(../images/global-sprite.png) no-repeat scroll -205px -288px transparent;
+}
+
+#acknowledgement {
+    background: url(../images/acknowledgement-thumbnail.jpg) no-repeat top left;
+    clear: left;
+    height: 50px;
+    margin-top: 320px;
+    padding-left: 64px;
+    width: 340px;
+}
+
+#acknowledgement h3 {
+    font-size: 1em;
+    padding: 3px 0 5px 0;
+}
+
+#acknowledgement p {
+    font-size: 0.9em;
+    line-height: 1.2em;
+}
+
+#footer-supplementary-wrapper {
+    background-color: #00467f;
+    margin: 0 auto;	
+}
+
+#footer-supplementary {
+    font-size: 0.9em;
+    height: 44px;
+    margin: 0 auto;
+    text-align: right;
+    width: 1060px;
+}
+
+#last-modified {
+    float: left;
+    padding-top: 16px;
+    text-align: left;
+    width: 460px;
+}
+
+#last-modified span {
+    border-right: 1px solid #769fbf;
+    margin-right: 3px;
+    padding-right: 8px;
+}
+
+#footer-supplementary ul {
+    float: left;
+    padding-top: 16px;
+    width: 600px;
+}
+
+#footer-supplementary ul li {
+    display: inline;    
+}
+
+#footer-supplementary ul li a {
+    color: #bfe0fb;
+    margin-left: 10px;
+}
+
+#strapline {
+    background-image: url(../images/date-sem-week-bg.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 92px;
+    width: 253px;
+}
+
+#strapline img {
+    left: 0;
+    position: absolute;
+    top: 6px;
+}
+
+#menu li:hover #int-students-menu {
+    left: -49px;
+}
+
+
+
+/******* corpsite internal link *******/
+
+body a[href*='www.qut.edu.au'], body a[href*="cms.qut.edu.au/corpsite"], body a[href*='cms-media.qut.edu.au'], body a[href*='cms.qut.edu.au/__data'], body a[href*='cms.qut.edu.au/__media'], body a[href*='staff.qut.edu.au'] {
+    background: none repeat scroll 0 0 transparent;
+    padding: 0;
+}
+
+
+
+/*******corpsite-specific footer styles *******/
+
+#footer-content .col {
+    margin-right: 16px !important;
+}
+
+#footer-content .col-1 {
+    width: 140px;
+}
+
+#footer-content .col-2 {
+    width: 140px;
+}
+
+#footer-content .col-3 {
+    width: 140px;
+}
+
+#footer-content .col-4 {
+    width: 155px;
+}
+
+#footer-content .col-5 {
+    width: 155px;
+}
+
+#footer #footer-content .col-6 {
+    margin-right: 0;
+    width: auto;
+}
+
+#footer-content #footer-social-media-links li {
+    margin-right: 7px !important;
+}
+
+#footer-content #footer-social-media-links li#email-footer-icon {
+    margin-right: 0 !important;
+}
+
+/* menu in content - for regular pages */
+#reg-menu-wrapper {
+    border: 1px solid #DBDBDB;
+    width: 100%;
+    padding-left: 15px;
+	padding-bottom: 40px;
+    z-index: 100;
+}
+
+#reg-menu {
+	position: relative;
+	top: 10px;
+}
+
+
+.menu-item {
+	background: url(/images/bullets.png) #fff no-repeat -0px -120px;
+    height: 20px;
+    margin-top: 5px;
+	padding: 0 0 0 0;
+    position: relative;
+	top: 10px;
+	left: 0px;
+    width: 100%;
+    z-index: 12;
+}
+
+.menu-item-text {
+    margin-left: 20px;
+    width: 258px;
+	position: relative;
+	bottom: 7px;
+}
